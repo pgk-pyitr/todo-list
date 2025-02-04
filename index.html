@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f8f9fa;
+    }
+    h1 {
+      text-align: center;
+      color: #343a40;
+    }
+    #task-counter {
+      text-align: center;
+      margin-bottom: 15px;
+      font-size: 16px;
+      color: #6c757d;
+    }
+    #task-input {
+      padding: 10px;
+      width: 300px;
+      margin-right: 10px;
+      border: 1px solid #ced4da;
+      border-radius: 5px;
+    }
+    #add-task-btn {
+      padding: 10px 20px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    #add-task-btn:hover {
+      background-color: #218838;
+    }
+    #task-list {
+      margin-top: 20px;
+      list-style-type: none;
+      padding: 0;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .task-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      margin-bottom: 10px;
+      transition: transform 0.2s ease-in-out, background-color 0.3s ease;
+      animation: fadeIn 0.5s ease;
+    }
+    .task-item:hover {
+      transform: scale(1.02);
+    }
+    .task-item.completed {
+      text-decoration: line-through;
+      background-color: #d4edda;
+    }
+    .delete-btn {
+      background-color: #dc3545;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .delete-btn:hover {
+      background-color: #c82333;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <h1>To-Do List</h1>
+  <div id="task-counter">Total tasks: 0</div>
+  <div style="text-align: center;">
+    <input type="text" id="task-input" placeholder="Enter a new task">
+    <button id="add-task-btn" aria-label="Add task">Add Task</button>
+  </div>
+  <ul id="task-list"></ul>
+
+  <script src="script.js"></script>
+</body>
+</html>
